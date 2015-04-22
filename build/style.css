@@ -1,0 +1,50 @@
+.dialog_img, .dialog_content{
+    display: inline-block;
+}
+.users .swipe-content{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.dialog_img{
+    width: 60px;
+    height: 60px;
+    background: url('../img/face_6.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.rounded{
+    border-radius: 50px;
+}
+.dialog_content{
+    vertical-align: top;
+    overflow: hidden;
+    width: 70%;
+}
+.user_name{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 700;
+}
+.dialog_date{
+    position: absolute;
+    right: 5px;
+    color: #777;
+}
+.view header, .view footer{
+    background-color: #fff!important;
+    box-shadow: 0 0 8px #777!important;
+}
+.panel{
+    background-color: #fff!important;
+}
+.dialog_content .dialog_body{
+    color: #777;
+    line-height: 2.0em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.backButton{
+    display: none!important;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test chat</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="build/icons.css" />
+    <link rel="stylesheet" type="text/css" href="build/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="build/style.css" />
+
+    <script type="text/javascript" charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://rawgit.com/ftlabs/fastclick/master/lib/fastclick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.shim.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.ui.js"></script>
+    <script src="src/af.desktopBrowsers.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.actionsheet.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.animation.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.touchEvents.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.popup.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.drawer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.toast.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.animateheader.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.splashscreen.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/af.swipereveal.js"></script>
+
+    <script>
+        $.afui.useOSThemes=false;
+        $.afui.loadDefaultHash=true;
+        $.afui.autoLaunch=false;
+
+        $(document).ready(function(){
+            $.afui.launch();
+        });
+
+        //if($.os.ios)
+        $.afui.animateHeader(true);
+
+    </script>
+</head>
+<body class="ios7">
+    <div class="view" id="mainView">
+        <header>
+            <h1>Chat</h1>
+        </header>
+        <div class="pages">
+            <div class="panel" data-title="Chat" id="chat" data-selected="true">
+                <ul class="list users">
+                    <li class="swipe-reveal">
+                        <div class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_1.jpg"/>-->
+                            </div>
+                            <span class="dialog_date">20 апреля</span>
+                            <div class="dialog_content">
+                                <div class="user_name">Аманда Роджерс</div>
+                                <div class="dialog_body">Спасибо</div>
+                            </div>
+                        </div>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li class="swipe-reveal">
+                        <div class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_2.jpg"/>-->
+                            </div>
+                            <span class="dialog_date">20.04.2015</span>
+                            <div class="dialog_content">
+                                <div class="user_name">Джули Энн Смит</div>
+                                <div class="dialog_body">Ладно удачи</div>
+                            </div>
+                        </div>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li class="swipe-reveal">
+                        <div class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_3.jpg"/>-->
+                            </div>
+                            <span class="dialog_date">9:31</span>
+                            <div class="dialog_content">
+                                <div class="user_name">Деметрия Гинес</div>
+                                <div class="dialog_body">Привет</div>
+                            </div>
+                        </div>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li class="swipe-reveal">
+                        <div class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_4.jpg"/>-->
+                            </div>
+                            <span class="dialog_date">14:22</span>
+                            <div class="dialog_content">
+                                <div class="user_name">Натали Хэршлег</div>
+                                <div class="dialog_body">Пока</div>
+                            </div>
+                        </div>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li class="swipe-reveal">
+                        <div class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_5.jpg"/>-->
+                            </div>
+                            <span class="dialog_date">15:11</span>
+                            <div class="dialog_content">
+                                <div class="user_name">Кэти Хадсон</div>
+                                <div class="dialog_body">Спасибо</div>
+                            </div>
+                        </div>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel" data-title="Home" id="main">Home</div>
+            <div class="panel" data-title="Login" id="login">Login page</div>
+            <div class="panel" data-title="Settings" id="settings">
+                <a href="#login" class="button" data-transition="up-reveal">Login</a>
+            </div>
+        </div>
+        <footer>
+            <a href="#chat" class="icon chat" data-transition="fade">Chat</a>
+            <a href="#main" class="icon home" data-transition="fade">Home</a>
+            <a href="#settings" class="icon settings" data-transition="fade">Settings</a>
+        </footer>
+    </div>
+</body>
+</html>
