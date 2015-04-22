@@ -75,3 +75,6 @@ App Framework is is licensed under the terms of the MIT License, see the include
 App Framework uses code from the following software:
 
 1) Karma Test Runner - https://github.com/karma-runner/karma (MIT-X11 License)
+# chat
+Chat plugin
+
