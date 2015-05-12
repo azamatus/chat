@@ -48,3 +48,123 @@
 .backButton{
     display: none!important;
 }
+#dialog_page .dialog_img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+}
+.dialog_message{
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.dialog_attached_img{
+    margin-bottom: 5px;
+    clear: both;
+}
+.dialog_attached_img img{
+    width: 85%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.dialog_message_content, .dialog_message_content_right{
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+.dialog_message_content_right .dialog_message{
+    background-color: #0084FF;
+    color: #fff;
+}
+.dialog_message_content_right{
+    text-align: right;
+}
+.clear{
+    clear: both;
+}
+.dialog_input{
+ width: 100%;
+}
+.dialog_input input{
+    border: none;
+}
+input::-webkit-input-placeholder       {text-indent: 0;   transition: text-indent 0.3s ease;}
+input::-moz-placeholder                {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:-moz-placeholder                 {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:-ms-input-placeholder            {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+
+.dialog_status{
+    width: 12px;
+    height: 12px;
+    background-color: #58CB56;
+    border-radius: 100px;
+    position: relative;
+    float: right;
+    top: 28px;
+}
+#dialogView header h1{
+    top: 0;
+}
+#users_panel .dialog_img{
+    width: 40px;
+    height: 40px;
+}
+#users_panel .dialog_content{
+    line-height: 30px;
+    margin-left: 10px;
+}
+#users_panel{
+    padding: 0;
+}
+#users_panel .users{
+    padding-right: 10px;
+}
+.search_users{
+    text-align: center;
+    padding-top: 10px;
+    background-color: #C7C7C7;
+}
+.search_users input{
+    border-radius: 4px;
+    width: 90%;
+    height: 30px;
+}
+#dialog_page{
+    background: url('../img/space.png') no-repeat;
+    background-size: cover;
+}
+.chat_background{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 5px;
+    border-radius: 4px;
+}
+#dialogView header .button{
+    font-weight: 700;
+    line-height: 7px;
+}
+.flaticon-previous11:before{
+    margin-left: 0!important;
+    margin-right: 5px;
+}
+/*.create_chat span{*/
+    /*float: left;*/
+    /*color: #777;*/
+    /*font-weight: 700;*/
+    /*font-size: 16px;*/
+/*}*/
+/*.create_chat input{*/
+    /*float: right;*/
+    /*width: 80%;*/
+    /*border: none;*/
+/*}*/

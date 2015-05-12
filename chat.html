@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="build/icons.css" />
     <link rel="stylesheet" type="text/css" href="build/af.ui.css" />
     <link rel="stylesheet" type="text/css" href="build/style.css" />
+    <link rel="stylesheet" type="text/css" href="build/flaticon.css" />
 
     <script type="text/javascript" charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="https://rawgit.com/ftlabs/fastclick/master/lib/fastclick.js"></script>
@@ -26,6 +27,7 @@
     <script type="text/javascript" charset="utf-8" src="src/af.animateheader.js"></script>
     <script type="text/javascript" charset="utf-8" src="src/af.splashscreen.js"></script>
     <script type="text/javascript" charset="utf-8" src="src/af.swipereveal.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src/custom.js"></script>
 
     <script>
         $.afui.useOSThemes=false;
@@ -39,6 +41,22 @@
         //if($.os.ios)
         $.afui.animateHeader(true);
 
+        function showCustomJsonSheet(){
+            $.afui.actionsheet(
+                    [{
+                        text: 'Yes',
+                        cssClasses: 'blue',
+                        handler: function () {
+                            alert("hi");
+                        }
+                    }, {
+                        text: 'No',
+                        cssClasses: '',
+                        handler: function () {
+                            alert("goodbye");
+                        }
+                    }]);
+        }
     </script>
 </head>
 <body class="ios7">
@@ -49,8 +67,9 @@
         <div class="pages">
             <div class="panel" data-title="Chat" id="chat" data-selected="true">
                 <ul class="list users">
-                    <li class="swipe-reveal">
-                        <div class="swipe-content">
+                    <li id='dialog_1' class="swipe-reveal">
+                        <!--<a href="#dialog_page" class="swipe-reveal">-->
+                        <a href="#dialog_page" class="swipe-content">
                             <div class="dialog_img rounded">
                                 <!--<img class="rounded" src="img/face_1.jpg"/>-->
                             </div>
@@ -59,13 +78,13 @@
                                 <div class="user_name">Аманда Роджерс</div>
                                 <div class="dialog_body">Спасибо</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="swipe-hidden">
                             <a class="button archive">Удалить</a>
                         </div>
                     </li>
-                    <li class="swipe-reveal">
-                        <div class="swipe-content">
+                    <li id='dialog_2' class="swipe-reveal">
+                        <a href="#dialog_page" class="swipe-content">
                             <div class="dialog_img rounded">
                                 <!--<img class="rounded" src="img/face_2.jpg"/>-->
                             </div>
@@ -74,68 +93,104 @@
                                 <div class="user_name">Джули Энн Смит</div>
                                 <div class="dialog_body">Ладно удачи</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="swipe-hidden">
                             <a class="button archive">Удалить</a>
                         </div>
                     </li>
-                    <li class="swipe-reveal">
-                        <div class="swipe-content">
+                    <li id='dialog_3' class="swipe-reveal">
+                        <a href="#dialog_page" class="swipe-content">
                             <div class="dialog_img rounded">
-                                <!--<img class="rounded" src="img/face_3.jpg"/>-->
+                                <!--<img class="rounded" src="img/face_2.jpg"/>-->
                             </div>
-                            <span class="dialog_date">9:31</span>
+                            <span class="dialog_date">20.04.2015</span>
                             <div class="dialog_content">
-                                <div class="user_name">Деметрия Гинес</div>
-                                <div class="dialog_body">Привет</div>
+                                <div class="user_name">Эмма Стоун</div>
+                                <div class="dialog_body">Ладно удачи</div>
                             </div>
-                        </div>
-                        <div class="swipe-hidden">
-                            <a class="button archive">Удалить</a>
-                        </div>
-                    </li>
-                    <li class="swipe-reveal">
-                        <div class="swipe-content">
-                            <div class="dialog_img rounded">
-                                <!--<img class="rounded" src="img/face_4.jpg"/>-->
-                            </div>
-                            <span class="dialog_date">14:22</span>
-                            <div class="dialog_content">
-                                <div class="user_name">Натали Хэршлег</div>
-                                <div class="dialog_body">Пока</div>
-                            </div>
-                        </div>
-                        <div class="swipe-hidden">
-                            <a class="button archive">Удалить</a>
-                        </div>
-                    </li>
-                    <li class="swipe-reveal">
-                        <div class="swipe-content">
-                            <div class="dialog_img rounded">
-                                <!--<img class="rounded" src="img/face_5.jpg"/>-->
-                            </div>
-                            <span class="dialog_date">15:11</span>
-                            <div class="dialog_content">
-                                <div class="user_name">Кэти Хадсон</div>
-                                <div class="dialog_body">Спасибо</div>
-                            </div>
-                        </div>
+                        </a>
                         <div class="swipe-hidden">
                             <a class="button archive">Удалить</a>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="panel" data-title="Home" id="main">Home</div>
+            <div class="panel" data-title="Compose" id="users_panel">
+                <div class="search_users">
+                    <input type="search" placeholder="Search"/>
+                </div>
+                <ul class="list users">
+                    <li id='user_1' class="swipe-reveal">
+                        <!--<a href="#dialog_page" class="swipe-reveal">-->
+                        <a href="#dialog_page" class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_1.jpg"/>-->
+                            </div>
+                            <div class="dialog_content">
+                                <div class="user_name">Аманда Роджерс</div>
+                            </div>
+                        </a>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li id='user_2' class="swipe-reveal">
+                        <a href="#dialog_page" class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_2.jpg"/>-->
+                            </div>
+                            <div class="dialog_content">
+                                <div class="user_name">Джули Энн Смит</div>
+                            </div>
+                        </a>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                    <li id='user_3' class="swipe-reveal">
+                        <a href="#dialog_page" class="swipe-content">
+                            <div class="dialog_img rounded">
+                                <!--<img class="rounded" src="img/face_2.jpg"/>-->
+                            </div>
+                            <div class="dialog_content">
+                                <div class="user_name">Эмма Стоун</div>
+                            </div>
+                        </a>
+                        <div class="swipe-hidden">
+                            <a class="button archive">Удалить</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="panel" data-title="Login" id="login">Login page</div>
             <div class="panel" data-title="Settings" id="settings">
-                <a href="#login" class="button" data-transition="up-reveal">Login</a>
+                <ul class="list chat_settings">
+                    <li><a href="#" onclick="showCustomJsonSheet()">Предварительный просмотр уведомлений</a></li>
+                    <li><a href="#" onclick="showCustomJsonSheet()">Вибрация</a></li>
+                    <li><a href="#" onclick="showCustomJsonSheet()">Свет</a></li>
+                    <li><a href="#" onclick="showCustomJsonSheet()">Звук</a></li>
+                </ul>
             </div>
+
         </div>
         <footer>
             <a href="#chat" class="icon chat" data-transition="fade">Chat</a>
-            <a href="#main" class="icon home" data-transition="fade">Home</a>
+            <a href="#users_panel" class="icon pencil" data-transition="fade">New Chat</a>
             <a href="#settings" class="icon settings" data-transition="fade">Settings</a>
+        </footer>
+    </div>
+    <div class="view" id="dialogView">
+        <header>
+            <a class="button glyph-icon flaticon-previous11" href="#mainView" data-transition="down-reveal:dismiss">Back</a>
+            <h1></h1>
+        </header>
+        <div class="pages">
+            <div class="panel" id="dialog_page" data-include="dialog_page.html"></div>
+        </div>
+        <footer>
+            <div class="dialog_input">
+                <input type="text" placeholder="Напишите сообщение">
+            </div>
         </footer>
     </div>
 </body>
