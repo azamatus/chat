@@ -47,7 +47,6 @@
         target.bind("touchmove",tracker);
         target.one("touchend",function(){
             target.unbind("touchmove",tracker);
-            console.log($.afui.swipeThreshold);
             if((1-Math.abs(end)/width)>$.afui.swipeThreshold)
             {
                 width=0;
